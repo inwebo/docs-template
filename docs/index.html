@@ -46,7 +46,7 @@
 <body>
 <header>
     <h1 class="title">Sprite.js</h1>
-    <h2 class="subtitle">Use sprite sheet with ease.</h2>
+    <h2 class="subtitle">Use sprite sheet, sprite, animated sprite and transparency colors with ease.</h2>
     <p class="disclaimer">
         <img title="Discover Sprite.js activity on github by Inwebo veritas" alt="Sprite.js activity by Inwebo veritas" src="https://img.shields.io/github/commit-activity/w/inwebo/Sprite.js">
         <img title="Discover Sprite.js repository on github by Inwebo veritas" alt="Sprite.js repository size by Inwebo veritas" src="https://img.shields.io/github/repo-size/inwebo/Sprite.js?logo=Sprite.js">
@@ -75,7 +75,6 @@
                     <ul class="sidebar-links">
                         <li><a title="Sprite.js features" href="#features">Features</a></li>
                         <li><a title="Sprite.js requirements" href="#requirements">Requirements</a></li>
-                        <li><a title="Sprite.js description" href="#description">Description</a></li>
                         <li><a title="Sprite.js installation" href="#installation">Install</a></li>
                         <li><a title="Sprite.js how to" href="#main-logic">Main logic</a></li>
                     </ul>
@@ -95,6 +94,7 @@
                     </ul>
                     <h3 class="sidebar-category"><a title="Sprite.js's use cases" href="#demos">Demos</a></h3>
                     <ul class="sidebar-links">
+                        <li><a title="Bootstrap Sprite.js project" href="#bootstrap-sprite-js">Bootstrap</a></li>
                         <li><a title="Use Sprite.js to load a sprite sheet" href="#sprite-sheet-src">Load sprite sheet</a></li>
                         <li><a title="Use Sprite.js to draw a sprite" href="#sprite-draw">Draw sprite</a></li>
                         <li><a title="Use Sprite.js to draw a sprite with transparency color" href="#sprite-transparency-draw">Draw sprite transparency</a></li>
@@ -116,66 +116,94 @@
 
                 <section id="quick-start">
                     <h4 id="features">Features</h4>
-                    <p>
-
-                    </p>
+                    <ul>
+                        <li>Smart javascript <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Canvas" target="_blank" title="Javascript canvas API">Canvas API</a> use.</li>
+                        <li>One Job</li>
+                        <li>Light weight</li>
+                        <li>Easy to understand <cite lang="fr">Pas de foutaises !</cite></li>
+                        <li>Modern Javascript (ES6), OOP ready. Extends a class and forget about javascript <cite>prototype</cite></li>
+                        <li>Manipulate color transparency</li>
+                        <li>Animate sprite as you want, choose your frames and animation duration. With SpriteMap object.</li>
+                    </ul>
                     <h4 id="requirements">Requirements</h4>
                     <p>
-
-                    </p>
-                    <h4 id="description">Description</h4>
-                    <p>
-
+                        You <strong>must</strong> understand the canvas API, you <strong>must</strong> know ES6 and Node.js compilation. If you need help i'm available here <a title="Inwebo veritas on github" href="https://github.com/inwebo" target="_blank">github</a>.
                     </p>
                     <h4 id="installation">Installation</h4>
-                    <p>
-
-                    </p>
+                    <pre class=" language-bash"><code class=" language-bash">npm install @inwebo/sprite.js</code></pre>
                     <h4 id="main-logic">Main logic</h4>
-                    <p>
-
-                    </p>
+                    <div class="stepper">
+                        <div class="step">
+                            <p class="step-number">1</p>
+                            <p class="step-title">Prepare a sprite sheet, sprite, image.</p>
+                            <p>A <a href="https://en.wikipedia.org/wiki/Sprite_(computer_graphics)">sprite sheet</a> is basically an image. It must be readable in your application.</p>
+                        </div>
+                        <div class="step">
+                            <p class="step-number">2</p>
+                            <p class="step-title"><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">Draw</a> your image on <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a>  or <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas">off screen canvas</a></p>
+                            <p>Draw image on a canvas API with drawImage method.</p>
+                        </div>
+                        <div class="step">
+                            <p class="step-number">3</p>
+                            <p class="step-title">Map your sprites.</p>
+                            <p>Sprite.js <strong>must</strong> know all sprites origin and dimensions. It is the most boring part of this job, and its yours&nbsp;!</p>
+                        </div>
+                        <div class="step">
+                            <p class="step-number">4</p>
+                            <p class="step-title">Read sprite pixels.</p>
+                            <p>Read pixels data as rgba color with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a> see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData</a> for details, they are now available for manipulation.</p>
+                        </div>
+                        <div class="step">
+                            <p class="step-number">5</p>
+                            <p class="step-title">Finally manipulate and draw pixels on your scene.</p>
+                            <p>Draw pixel on target canvas</p>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="dependencies">
-                    <h4 id="render-js">Render.js</h4>
+                    <h4 id="render-js"><a title="Render.js javascript class, abstract the boring parts of canvas rendering" href="https://github.com/inwebo/Render.js">Render.js</a></h4>
                     <p>
-
+                        Render to canvas utility class, abstract the boring parts. (not required).
                     </p>
-                    <h4 id="vector">Vector</h4>
+                    <h4 id="vector"><a title="Simple 2D vector representation." href="https://github.com/inwebo/Vector">Vector</a></h4>
                     <p>
-
+                        Vector manipulation needed for RGB representation. (required)
                     </p>
                 </section>
 
                 <section id="class">
                     <h4 id="sprite-js">Sprite.js</h4>
                     <p>
-
+                        Representation of a sprite as ImageData object. May manipulate pixels to apply transparency to one color.
                     </p>
                     <h4 id="rgb">Rgb.js</h4>
                     <p>
-
+                        Utility class, representation of RGB color.
                     </p>
                     <h4 id="animated-sprite">AnimatedSprite.js</h4>
                     <p>
-
+                        Sprite collection to animate, may have a duration (ms).
                     </p>
                     <h4 id="sprite-map">SpriteMap.js</h4>
                     <p>
-
+                        Utility class, will build animated sprites from a json file map. See doom.json for information.
                     </p>
                     <h4 id="render-sheet">RenderSheet.js</h4>
                     <p>
-
+                        Utility class to draw image on canvas.
                     </p>
                     <h4 id="render-sprite">RenderSprite.js</h4>
                     <p>
-
+                        Utility class to draw image on canvas, may use Sprite transparency.
                     </p>
                 </section>
 
                 <section id="demos">
+                    <h4 id="bootstrap-sprite-js">How to bootstrap your project ?</h4>
+                    <p>
+
+                    </p>
                     <h4 id="sprite-sheet-src">How to load a sprite sheet ?</h4>
                     <p>
 

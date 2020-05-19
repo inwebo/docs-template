@@ -1,8 +1,22 @@
+<!--
+    {GA} =
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166786698-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{GA}');
+    </script>
+
     <meta charset="UTF-8">
-    <title>Sprite.js s, most simple way to manipulate sprite with Javascript</title>
+    <title>Sprite.js the most simple way to manipulate sprite with Javascript</title>
     <!-- Fonts and CSS Reset -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -20,41 +34,35 @@
     <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
 
     <!-- Overriding UI -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <meta name="description" content="Mustard UI is a complete CSS framework that is production ready out of the box. There is no need to customize the CSS if you don’t want to because it is head and shoulders above others in terms of the way that it looks. We think it looks great and hope you do too."/>
+    <meta name="description" content="Sprite.js Use sprite sheet, sprite, animated sprite and transparency colors with ease."/>
     <link rel="canonical" href="index.html" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mustard UI &middot; A CSS framework that actually looks good." />
-    <meta property="og:description" content="Mustard UI is a complete CSS framework that is production ready out of the box. There is no need to customize the CSS if you don’t want to because it is head and shoulders above others in terms of the way that it looks. We think it looks great and hope you do too." />
+    <meta property="og:title" content="Sprite.js a simple sprite javascript made with ♥." />
+    <meta property="og:description" content="Smart javascript Canvas API use." />
     <meta property="og:url" content="index.html" />
-    <meta property="og:site_name" content="Mustard UI" />
-    <meta property="og:image" content="wp-content/uploads/2018/04/mustard-ui-image.png" />
-    <meta property="og:image:secure_url" content="wp-content/uploads/2018/04/mustard-ui-image.png" />
-    <meta property="og:image:width" content="600" />
-    <meta property="og:image:height" content="315" />
+    <meta property="og:site_name" content="Sprite.js" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="Mustard UI is a complete CSS framework that is production ready out of the box. There is no need to customize the CSS if you don’t want to because it is head and shoulders above others in terms of the way that it looks. We think it looks great and hope you do too." />
-    <meta name="twitter:title" content="Mustard UI &middot; A CSS framework that actually looks good." />
-    <meta name="twitter:site" content="@hellokyle" />
-    <meta name="twitter:image" content="wp-content/uploads/2018/04/mustard-ui-image.png" />
-    <meta name="twitter:creator" content="@hellokyle" />
+    <meta name="twitter:description" content="Sprite.js Use sprite sheet, sprite, animated sprite and transparency colors with ease." />
+    <meta name="twitter:title" content="Sprite.js a simple sprite javascript made with ♥." />
+    <meta name="twitter:site" content="@inwebo/sprite.js" />
+    <meta name="twitter:creator" content="@inwebo/sprite.js" />
 
 </head>
 <body>
 <header>
-    <h1 class="title">Sprite.js</h1>
+    <h1 class="title">Sprite.js <canvas id="mario-walking" width="16" height="32"></canvas></h1>
     <h2 class="subtitle">Use sprite sheet, sprite, animated sprite and transparency colors with ease.</h2>
     <p class="disclaimer">
-        <img title="Discover Sprite.js activity on github by Inwebo veritas" alt="Sprite.js activity by Inwebo veritas" src="https://img.shields.io/github/commit-activity/w/inwebo/Sprite.js">
+        <img title="Discover Sprite.js activity on github by Inwebo veritas" alt="Sprite.js activity by Inwebo veritas" src="https://img.shields.io/github/commit-activity/w/inwebo/sprite.js">
         <img title="Discover Sprite.js repository on github by Inwebo veritas" alt="Sprite.js repository size by Inwebo veritas" src="https://img.shields.io/github/repo-size/inwebo/Sprite.js?logo=Sprite.js">
         <img title="Sprite.js version on github" alt="Sprite.js version size by Inwebo veritas"
              src="https://img.shields.io/github/package-json/v/inwebo/Sprite.js?logo=Sprite.js">
         <img title="Sprite.js version last commit by Inwebo veritas on github" alt="Sprite.js last activity by Inwebo veritas" src="https://img.shields.io/github/last-commit/inwebo/sprite.js">
     </p>
-<!--    <button class="get-started button button-primary button-large">Let's rock</button>-->
 
     <a class="scroll-down" href="#content" title="Discover Sprite.js on github by Inwebo veritas"></a>
 </header>
@@ -105,8 +113,7 @@
                     </ul>
                     <h3 class="sidebar-category"><a title="Sprite.js's use cases" href="#help">Help</a></h3>
                     <ul class="sidebar-links">
-                        <li><a title="Sprite.js bug report" href="#sprite-sheet-bug-report">Bug report</a></li>
-                        <li><a title="Sprite.js webography" href="#sprite-sheet-webography">Webography</a></li>
+                        <li><a title="Sprite.js bug report" href="https://github.com/inwebo/Sprite.js/issues" target="_blank">Bug report</a></li>
                         <li><a title="Sprite sheet resources" href="#sprite-sheet-assets">Assets</a></li>
                         <li><a title="Sprite sheet resources" href="#one-love">One love</a></li>
                     </ul>
@@ -125,12 +132,21 @@
                         <li>Manipulate color transparency</li>
                         <li>Animate sprite as you want, choose your frames and animation duration. With SpriteMap object.</li>
                     </ul>
+                    <br />
+                    <hr>
+                    <br />
                     <h4 id="requirements">Requirements</h4>
                     <p>
                         You <strong>must</strong> understand the canvas API, you <strong>must</strong> know ES6 and Node.js compilation. If you need help i'm available here <a title="Inwebo veritas on github" href="https://github.com/inwebo" target="_blank">github</a>.
                     </p>
+                    <br />
+                    <hr>
+                    <br />
                     <h4 id="installation">Installation</h4>
                     <pre class=" language-bash"><code class=" language-bash">npm install @inwebo/sprite.js</code></pre>
+                    <br />
+                    <hr>
+                    <br />
                     <h4 id="main-logic">Main logic</h4>
                     <div class="stepper">
                         <div class="step">
@@ -173,27 +189,27 @@
                 </section>
 
                 <section id="class">
-                    <h4 id="sprite-js">Sprite.js</h4>
+                    <h4 id="sprite-js"><a href="https://github.com/inwebo/Sprite.js/blob/master/src/Sprite/Sprite.js" target="_blank">Sprite.js</a></h4>
                     <p>
                         Representation of a sprite as ImageData object. May manipulate pixels to apply transparency to one color.
                     </p>
-                    <h4 id="rgb">Rgb.js</h4>
+                    <h4 id="rgb"><a href="https://github.com/inwebo/Sprite.js/blob/master/src/Rgb/Rgb.js" target="_blank">Rgb.js</a></h4>
                     <p>
                         Utility class, representation of RGB color.
                     </p>
-                    <h4 id="animated-sprite">AnimatedSprite.js</h4>
+                    <h4 id="animated-sprite"><a href="https://github.com/inwebo/Sprite.js/blob/master/src/AnimatedSprite/AnimatedSprite.js" target="_blank">AnimatedSprite.js</a></h4>
                     <p>
                         Sprite collection to animate, may have a duration (ms).
                     </p>
-                    <h4 id="sprite-map">SpriteMap.js</h4>
+                    <h4 id="sprite-map"><a href="https://github.com/inwebo/Sprite.js/blob/master/src/SpriteMap/SpriteMap.js" target="_blank">SpriteMap.js</a></h4>
                     <p>
                         Utility class, will build animated sprites from a json file map. See doom.json for information.
                     </p>
-                    <h4 id="render-sheet">RenderSheet.js</h4>
+                    <h4 id="render-sheet"><a href="https://github.com/inwebo/Sprite.js/blob/master/src/RenderSheet/RenderSheet.js" target="_blank">RenderSheet.js</a></h4>
                     <p>
                         Utility class to draw image on canvas.
                     </p>
-                    <h4 id="render-sprite">RenderSprite.js</h4>
+                    <h4 id="render-sprite"><a href="https://github.com/inwebo/Sprite.js/blob/master/src/RenderSprite/RenderSprite.js" target="_blank">RenderSprite.js</a></h4>
                     <p>
                         Utility class to draw image on canvas, may use Sprite transparency.
                     </p>
@@ -201,9 +217,63 @@
 
                 <section id="demos">
                     <h4 id="bootstrap-sprite-js">How to bootstrap your project ?</h4>
-                    <p>
+                    <h5>Download and map a sprite sheet</h5>
+                    <div class="row">
+                        <div class="col col-lg-1">
+                            <figure>
+                                <img src="assets/img/doom.png" />
+                            </figure>
+                        </div>
+                        <div class="col col-lg-11">
+                            This is our sprite sheet rendered on canvas. Its dimensensions are, <code>widht = 52px</code>,
+                            <code>height: 265px</code>. It contains 4 frames, each frames got same dimension, <code>widht = 42px</code> and
+                            <code>height: 60px</code>, the transparency color is <code>rgb(255, 0, 255)</code>.
+                            Origins : Sheet origin<code>0, 0 (top left corner)</code>, <code>Frame 1: 5, 5</code>, <code>Frame 2: 5, 70</code>, <code>Frame 3: 5, 135</code>, <code>Frame 4: 5, 200</code>.
+                        </div>
+                    </div>
+                    <pre class=" language-javascript">
+                        <code class=" language-javascript">
 
-                    </p>
+                            window.addEventListener("DOMContentLoaded", (event) => {
+
+                                // Sheet is fully loaded callback
+                                marioSheetImage.onload = (e) => {
+                                    // Render sheet, its pixels are now available
+                                    renderMarioSheetRender.draw(marioSheetImage);
+
+                                    // Load animation config
+                                    fetch("mario.json")
+                                        .then((response) => {
+                                            return response.json();
+                                        })
+                                        .then((json) => {
+                                            try {
+
+                                                const frames = [];
+
+                                                frames.push(renderMarioSheetRender.getCtx().getImageData(0, 0, 16, 32));
+                                                frames.push(renderMarioSheetRender.getCtx().getImageData(17, 0, 16, 32));
+                                                frames.push(renderMarioSheetRender.getCtx().getImageData(34, 0, 16, 32));
+
+                                                const marioWalking = new AnimatedSprite(frames);
+
+                                                // And animate it
+                                                setInterval(() => {
+                                                    renderMarioSpriteRender.draw(marioWalking);
+                                                    marioWalking.step();
+                                                }, 100);
+
+                                            } catch (e) {
+                                                console.log(e);
+                                            }
+                                        });
+
+                                };
+
+                                marioSheetImage.src = sheerSrc;
+                            });
+                        </code>
+                    </pre>
                     <h4 id="sprite-sheet-src">How to load a sprite sheet ?</h4>
                     <p>
 
@@ -243,22 +313,8 @@
                 </section>
 
                 <section id="help">
-                    <h4 id="sprite-sheet-bug-report">Bug report</h4>
-                    <p>
 
-                    </p>
-
-                    <h4 id="sprite-sheet-webography">Webography</h4>
-                    <p>
-
-                    </p>
-
-                    <h4 id="sprite-sheet-assets">Need assets ?</h4>
-                    <p>
-
-                    </p>
-
-                    <h4 id="one-love">One ♥</h4>
+                    <h4 id="one-love">Thanks</h4>
                     <ul>
                         <li>Mustard ui</li>
                     </ul>
@@ -289,9 +345,10 @@
             </div>
         </div>
     </div>
-
-    <p class="copyright align-center">Made by <img src="logo-ico.png" width="16" height="16" alt="Inwebo veritas" title="Inwebo veritas logo"> (Inwebo Veritas).</p>
+<!--@todo-->
+<!--    <p class="copyright align-center">Made by <img src="logo-ico.png" width="16" height="16" alt="Inwebo veritas" title="Inwebo veritas logo"> (Inwebo Veritas).</p>-->
 
 </footer>
+<script type="application/javascript" src="assets/js/mario.min.js"></script>
 </body>
 </html>
